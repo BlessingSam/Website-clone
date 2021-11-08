@@ -1,3 +1,3 @@
 # Website-Clone
 
-https://blessingsam.github.io/Website-clone/
+check it out here : https://blessingsam.github.io/Website-clone/
