@@ -1,0 +1,515 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    box-sizing: border-box;
+}
+.header-1{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 55px;
+    background-color: #2a3855;
+}
+.header-address{
+    position: absolute;
+    width: 73.5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+span{
+    position: relative;
+    color: white;
+    font-weight: 700;
+    font-size: 12px;
+    margin-left: 5px;
+}
+.header-2{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.caroseul{
+    width: 100%;
+    overflow: hidden;
+}
+.slidescontainer{
+    height: 750px;
+    transition: 900ms cubic-bezier(0.48,0.15,0.18,1);
+    position: relative;
+}
+.slide-image{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+.slide-image .image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.prevbtn, 
+.nextbtn{
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    z-index: 100;
+    transition: 400ms;
+    cursor: pointer;
+}
+.prevbtn{
+    left: 0;
+}
+.nextbtn{
+    right: 0;
+}
+.navigation{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    top: 0%;
+    height: 58px;
+    background-color: rgba(255, 255, 255, 0.705);
+    z-index: 101;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    
+}
+.navbar{
+    list-style: none;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 73.5%;
+}
+.nav-opt{
+    padding: 0 13px;
+    font-weight: 600;
+    color: #2a3855;
+    letter-spacing: 0.5px;
+    display: block;
+}
+.caroseulcontent{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 73.5%;
+    height: 100%;
+    z-index: 111;
+}
+.contentbox{
+    position: absolute;
+    float: left;
+}
+.contentheading{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    color: #2a3855;
+}
+.content{
+    color: #2a3855;
+    font-size: 28px;
+    padding: 18px 0 60px 0;
+}
+.header2buttons{
+    display: flex;
+    list-style: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+.buton1{
+    padding: 13px 45px;
+    background-color: #2a3855;
+    color: white;
+    border-radius: 3px;
+    font-size: 13px;
+    cursor: pointer;
+}
+.buton2{
+    padding: 13px 45px;
+    background-color: #fdd428;
+    color: #2a3855;
+    border-radius: 3px;
+    margin-left: 15px;
+    font-size: 13px;
+    cursor: pointer;
+}
+.buton1:hover{
+    background-color: #1b2944 ;
+}
+.buton2:hover{
+    background-color: #f1cc38 ;
+}
+.header3{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+.header3inside{
+    position: relative;
+    width: 73.5%;
+}
+.header3heading1{
+    font-family: 'Montserrat', sans-serif;
+    color: #2a3855;
+    margin-top: 130px;
+    margin-bottom: 18px;
+    font-weight: bold;
+    font-size: 35px;
+}
+.header3heading1para{
+    font-family: 'Open Sans', sans-serif;
+    color: #848484;
+}
+.contentbox2{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 250px;
+    margin: 80px 0 60px 0;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.video{
+    width: 100%;
+    position: relative;
+    margin: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.videoimg{
+    width: 100%;
+    border-radius: 10px;
+}
+.play{
+    position: absolute;
+    z-index: 112;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.568);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.play1{
+    position: absolute;
+    z-index: 112;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.contentbox3{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 200px;
+    margin: 80px 0 60px 0;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.header4{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #fafafa;
+}
+.header4inside{
+    position: relative;
+    width: 73.5%;
+}
+.header4content{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 73.5%;
+    height: 100%;
+    z-index: 111;
+}
+.header4heading1{
+    font-family: 'Montserrat', sans-serif;
+    color: #2a3855;
+    margin-top: 130px;
+    margin-bottom: 18px;
+    font-weight: bold;
+    font-size: 35px;
+}
+.imagewithcontent{
+    background-color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+.header4content1{
+    width: 50%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header4content3{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 170px;
+    margin: 40px 0 50px 0;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.header5{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header5inside{
+    width: 73.5%;
+}
+.header5heading1{
+    font-family: 'Montserrat', sans-serif;
+    color: #2a3855;
+    margin-top: 130px;
+    margin-bottom: 18px;
+    font-weight: bold;
+    font-size: 35px;
+    text-align: center;
+}
+.imagewithcontent1{
+    position: relative;
+    width: 100%;
+    display: flex;
+    margin-bottom: 100px;
+}
+.header5content{
+    width: 52%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header6{
+    position: relative;
+    width: 100%;
+    height: 760px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.header6inside{
+    width: 73.5%;
+    position: relative;
+    text-align: center;
+}
+.header6heading{
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    color: #2a3855;
+}
+.header6contentbox1{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header6contentbox2{
+    margin-top: 70px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header7{
+    position: relative;
+    background-color: #2a3855;
+    height: 456px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.header7inside{
+    position: relative;
+    width: 73.5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header7content{
+    border: 3px solid #fdd428;
+    padding: 50px 15px 50px 15px;
+    width: 330px;
+    border-radius: 12px;
+    text-align: center;
+}
+.form{
+    position: relative;
+    width: calc(100% -  330px);
+}
+input{
+    position: relative;
+    height: 45px;
+    width: 320px;
+    margin: 10px;
+    border: none;
+}
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.submit{
+    height: 45px;
+    width: 320px;
+    margin: 10px;
+    background-color: #fdd428;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.submit:hover{
+    cursor: pointer;
+    background-color:#fdd228d3;
+}
+.header8{
+    position: relative;
+    height: 1308.05px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #fafafa;
+}
+.header8photowithcontent{
+    width: 100%;
+    height: 980px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.header8inside{
+    position: relative;
+    width: 73.5%;
+}
+.card{
+    position: relative;
+    height: 447.33px ;
+    width: 350px;
+    background-color: white;
+    border-radius: 10px;
+}
+.header9{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-image: url(../Images/backgroundimage1.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header9inside{
+    position: absolute;
+    width: 73.5%;
+}
+.header9heading{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    color: #ffffff;
+}
+.header10{
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+.header11{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logos{
+    position: relative;
+    width: 73.5%;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.header12{
+    position: relative;
+    width: 100%;
+    height: 850px;
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.header12inside{
+    position: relative;
+    width: 73.5%;
+}
+.header12heading{
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    color: #2a3855;
+}
+.header12content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.card2{
+    position: relative;
+    height: 522.66px ;
+    width: 350px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: left;
+}

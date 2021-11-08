@@ -1,124 +1,504 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
-<style>
-    *{
-    padding: 0;
-    margin: 0;
-    user-select: none;
-    font-family: sans-serif;
-    background-color: #1F2123;
-    outline: none;
-    color: aliceblue;
-    border: none;
-}
-.container{
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center !important;
-}
-.calculator{
-    position: relative;
-    background-color: #1F2123;
-    display: grid;
-    grid-template-columns: repeat(4,87.5px);
-    box-shadow: 6px 6px 12px #1B1818,-6px -6px 12px #1B1818!important;
-    padding: 10px;
-}
-input{
-    grid-column: span 4;
-    height: 70px;
-    box-shadow: inset 6px 6px 12px #1B1818,inset -6px -6px 12px #1B1818!important;
-    text-align: end;
-    font-size: 40px;
-    padding: 0px 10px;
-    margin: 15px 10px;
-}
-button{
-    height: 70px;
-    width: 70px;
-    box-shadow: inset 6px 6px 12px #1B1818, inset -6px -6px 12px #1B1818!important;
-    margin: 10px;
-    font-size: 25px;
-    cursor: pointer;
-}
-button:hover{
-    box-shadow: 6px 6px 12px #1B1818, -6px -6px 12px #1B1818!important;
-}
-.equalto{
-    background-color: #e6e7ee;
-    box-shadow: inset 6px 6px 12px #959ba3, inset -6px -6px 12px #959ba3 !important;
-    color: #1F2123;
-}
-.equalto:hover{
-    box-shadow: 0px 0px 2px #959ba3, 0px 0px 2px #959ba3 !important;
-}
-</style>
+    <link rel="stylesheet" href="../HTML/Asset/Css/clone.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Task</title>
 </head>
-<body>
-    <div class="container">
-        <div class="calculator">
-            <input type="text" placeholder="0" id="output">
-            <button onclick="cle()">C</button>
-            <button onclick="display('%')">%</button>
-            <button onclick="del()">del</button>
-            <button onclick="display('/')">/</button>
-            <button onclick="display('7')">7</button>
-            <button onclick="display('8')">8</button>
-            <button onclick="display('9')">9</button>
-            <button onclick="display('*')">×</button>
-            <button onclick="display('4')">4</button>
-            <button onclick="display('5')">5</button>
-            <button onclick="display('6')">6</button>
-            <button onclick="display('-')">-</button>
-            <button onclick="display('1')">1</button>
-            <button onclick="display('2')">2</button>
-            <button onclick="display('3')">3</button>
-            <button onclick="display('+')">+</button>
-            <button onclick="display('00')">00</button>
-            <button onclick="display('0')">0</button>
-            <button onclick="display('.')">.</button>
-            <button onclick="calculate()" class="equalto">=</button>
 
+<body>
+    <div class="header-1">
+        <div class="header-address">
+            <div> <i class="fa fa-map-marker" style="color: #fdd428; font-size: 17.3px; margin-right: 16px;"
+                    aria-hidden="true"> <span>1010 Avenue, New York, NY 10018 US.</span></i>
+
+                <i class="fa fa-phone" style="color: #fdd428; font-size: 17.3px; " aria-hidden="true"><span
+                        style="margin-left: 10px;">212 386 5575, 212 386 5576</span></i>
+            </div>
+
+            <i class="fa fa-clock-o" style="color: #fdd428; font-size: 17.3px; " aria-hidden="true"><span
+                    style="margin-left: 10px;">Mon-Sat, 8.00-18.00. Sunday CLOSED</span></i>
         </div>
     </div>
-    <script>
-        
-        let output = document.getElementById("output")
+    <div class="header-2 col-1">
+        <div class="navigation">
+            <ul class="navbar">
+                <img style="width: 125px; margin-right: 7px;" src="../HTML/Asset/Images/logo.PNG" alt="">
+                <li class="nav-opt">Home<i class="fa fa-angle-down" style="padding-left: 3px; font-weight: bold;"
+                        aria-hidden="true"></i></li>
+                <li class="nav-opt">Pages<i class="fa fa-angle-down" style="padding-left: 3px; font-weight: bold;"
+                        aria-hidden="true"></i></li>
+                <li class="nav-opt">News<i class="fa fa-angle-down" style="padding-left: 3px; font-weight: bold;"
+                        aria-hidden="true"></i></li>
+                <li class="nav-opt">Elements<i class="fa fa-angle-down" style="padding-left: 3px; font-weight: bold;"
+                        aria-hidden="true"></i></li>
+                <li class="nav-opt">Contact</li>
+            </ul>
+        </div>
+        <div class="caroseulcontent">
+            <div class="contentbox">
+                <h1 class="contentheading">Helping Leaders</h1>
+                <p class="content">We look forward to help you in taking your<br> company to new height.</p>
+                <ul class="header2buttons">
+                    <li class="buton1">Read more<i class="fa fa-chevron-right" style="padding-left: 6px;"
+                            aria-hidden="true"></i></li>
+                    <li class="buton2">Contact us<i class="fa fa-chevron-right" style="padding-left: 6px;"
+                            aria-hidden="true"></i></li>
+                </ul>
+            </div>
+        </div>
+        <div class="caroseul">
+            <i class="fa fa-chevron-left prevbtn" aria-hidden="true"></i>
+            <div class="slidescontainer">
+                <div class="slide-image">
+                    <img class="image" src="../HTML/Asset/carosoul/header-1.png" alt="">
+                </div>
+                <div class="slide-image">
+                    <img class="image" src="../HTML/Asset/carosoul/header-2.png" alt="">
+                </div>
+                <div class="slide-image">
+                    <img class="image" src="../HTML/Asset/carosoul/header-3.png" alt="">
+                </div>
+            </div>
+            <i class="fa fa-chevron-right nextbtn" aria-hidden="true"></i>
+        </div>
+    </div>
+    <div class="header3">
+        <div class="header3inside">
+            <h1 class="header3heading1">Welcome to the Elixir</h1>
+            <p class="header3heading1para">Get expert consultancy and support with Elixir, an advisory firm <br> that
+                stand by your side always.</p>
+            <hr size="3.5" ; width="65" ; color="#2a3855" ;
+                style="margin-top: 13px; margin-bottom: 50px; display: flex; margin-left: 47%; border-radius: 15%;">
+            <div class="contentbox2">
+                <div>
+                    <i class="fa fa-bar-chart" aria-hidden="true"
+                        style="padding: 30px; margin-bottom: 20px; font-size: 40px; border-radius: 50%; background-color: #fafafa; border: 1px solid rgb(218, 213, 213);"></i>
+                    <h2 style="margin-bottom: 15px; color: #2a3855; font-weight: bold;">Business Consulting</h2>
+                    <p style="color: #848484;">Solution for every business <br> related problems, readily <br>
+                        and skillfully.</p>
+                </div>
+                <div>
+                    <i class="fa fa-bar-chart" aria-hidden="true"
+                        style="padding: 30px; margin-bottom: 20px; font-size: 40px; border-radius: 50%; background-color: #fafafa; border: 1px solid rgb(218, 213, 213);"></i>
+                    <h2 style="margin-bottom: 15px; color: #2a3855; font-weight: bold;">Business Consulting</h2>
+                    <p style="color: #848484;">Solution for every business <br> related problems, readily <br>
+                        and skillfully.</p>
+                </div>
+                <div>
+                    <i class="fa fa-bar-chart" aria-hidden="true"
+                        style="padding: 30px; margin-bottom: 20px; font-size: 40px; border-radius: 50%; background-color:#fafafa; border: 1px solid rgb(218, 213, 213);"></i>
+                    <h2 style="margin-bottom: 15px; color: #2a3855; font-weight: bold;">Business Consulting</h2>
+                    <p style="color: #848484;">Solution for every business <br> related problems, readily <br>
+                        and skillfully.</p>
+                </div>
+                <div>
+                    <i class="fa fa-bar-chart" aria-hidden="true"
+                        style="padding: 30px; border: 1px solid rgb(218, 213, 213); margin-bottom: 20px; font-size: 40px; border-radius: 50%; background-color: #fafafa;"></i>
+                    <h2 style="margin-bottom: 15px; color: #2a3855; font-weight: bold;">Business Consulting</h2>
+                    <p style="color: #848484;">Solution for every business <br> related problems, readily <br>
+                        and skillfully.</p>
+                </div>
+            </div>
+            <div class="video">
+                <img class="videoimg" src="../HTML/Asset/Images/image 1.jpg" alt="">
+                <div class="play">
+                </div>
+                <div class="play1">
+                    <i class="fa fa-play" style="font-size: 25px; color: #2a3855;" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="contentbox3">
+                <div style="text-align: left; width: 30%;">
+                    <h2 style="margin-bottom: 15px; color: #2a3855; font-weight: bold;"> <i class="fa fa-users"
+                            aria-hidden="true" style="margin-right: 13px;"></i>Awesome Team</h2>
+                    <p style="color: #848484;">Before talking destination, we shine a <br> spotlight across your
+                        organization <br>
+                        to fully understand it.</p>
+                </div>
+                <div style="text-align: left; width: 30%;">
+                    <h2 style="margin-bottom: 15px; color: #2a3855; font-weight: bold;"><i class="fa fa-comments"
+                            aria-hidden="true" style="margin-right: 13px;"></i>Excellent Support</h2>
+                    <p style="color: #848484;">If you face any trouble, you can always <br> let our dedicated support
+                        team help <br> you. They are ready for you 24/7.</p>
+                </div>
+                <div style="text-align: left; width: 30%;">
+                    <h2 style="margin-bottom: 15px; color: #2a3855; font-weight: bold;"><i class="fa fa-bolt"
+                            aria-hidden="true" style="margin-right: 13px; "></i>Faster Performance</h2>
+                    <p style="color: #848484;">We develop a systematic well-ordered <br> process of analysis, from
+                        concept <br> through implementation.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header4">
+        <div class="header4inside">
+            <h1 class="header4heading1">Our Services</h1>
+            <hr size="3.5" ; width="65" ; color="#2a3855" ;
+                style="margin-top: 13px; margin-bottom: 50px; display: flex; margin-left: 47%; border-radius: 15%;">
+            <div class="imagewithcontent">
+                <img style="width: 50%; border-radius: 10px 0 0 0;" src="../HTML/Asset/Images/image 2.jpg" alt="">
+                <div class="header4content1">
+                    <div style="width: 85%;">
+                        <h3
+                            style="margin-bottom: 20px; font-family: 'Montserrat', sans-serif; color: #2a3855; font-weight: bold; font-size: 21px;">
+                            Business Consulting
+                        </h3>
+                        <p style="color: #848484; margin-bottom: 15px;">
+                            As one of the world’s largest accountancy networks, elixir <br> helps a diverse range of
+                            clients with a diverse range of <br> needs.This is especially true of our Advisory Practice,
+                            which <br> provides corporate finance and transaction services, business <br> restructuring.
+                        </p>
+                        <p style=" color: #2a3855; font-weight: bold;">Learn more <i class="fa fa-long-arrow-right"
+                                aria-hidden="true" style="margin-left: 7px;"></i></p>
+                    </div>
+                </div>
+            </div>
+            <div class="imagewithcontent">
+                <div class="header4content1">
+                    <div style="width: 85%;">
+                        <h3
+                            style="margin-bottom: 20px; font-family: 'Montserrat', sans-serif; color: #2a3855; font-weight: bold; font-size: 21px;">
+                            Tax consulting
+                        </h3>
+                        <p style="color: #848484; margin-bottom: 15px;">
+                            Elixir serves clients across the country and around the world <br> as they navigate an
+                            increasingly complex tax landscape. Our <br> tax professionals draw on deep experience and
+                            industry- <br>
+                            specific knowledge to deliver clients the insights and <br> innovation they need.
+                        </p>
+                        <p style=" color: #2a3855; font-weight: bold;">Learn more <i class="fa fa-long-arrow-right"
+                                aria-hidden="true" style="margin-left: 7px;"></i></p>
+                    </div>
+                </div>
+                <img style="width: 50%;" src="../HTML/Asset/Images/image 3.png" alt="">
+            </div>
+            <div class="imagewithcontent">
+                <img style="width: 50%; border-radius: 0 0 0 10px;" src="../HTML/Asset/Images/image 4.png" alt="">
+                <div class="header4content1">
+                    <div style="width: 85%;">
+                        <h3
+                            style="margin-bottom: 20px; font-family: 'Montserrat', sans-serif; color: #2a3855; font-weight: bold; font-size: 21px;">
+                            Advisory
+                        </h3>
+                        <p style="color: #848484; margin-bottom: 15px;">
+                            To help you understand what this road looks like, we <br> surveyed 1165 digital marketers
+                            across Europe and North <br> America to explore current trends and priorities in digital
+                            <br> marketing.
+                        </p>
+                        <p style=" color: #2a3855; font-weight: bold; ">Learn more <i class="fa fa-long-arrow-right"
+                                aria-hidden="true" style="margin-left: 7px;"></i></p>
+                    </div>
+                </div>
+            </div>
+            <div class="header4content3">
+                <div style="text-align: left; width: 30%;">
+                    <h2 style="margin-bottom: 15px; color: #2a3855; font-weight: bold;"> <i class="fa fa-users"
+                            aria-hidden="true" style="margin-right: 13px;"></i>Special financing</h2>
+                    <p style="color: #848484;">Apply for special financial support and <br> earn exclusive rewards.</p>
+                </div>
+                <div style="text-align: left; width: 30%;">
+                    <h2 style="margin-bottom: 15px; color: #2a3855; font-weight: bold;"><i class="fa fa-comments"
+                            aria-hidden="true" style="margin-right: 13px;"></i>Chat with team</h2>
+                    <p style="color: #848484;">Have a question? Chat online with an <br> expert.</p>
+                </div>
+                <div style="text-align: left; width: 30%;">
+                    <h2 style="margin-bottom: 15px; color: #2a3855; font-weight: bold;"><i class="fa fa-bolt"
+                            aria-hidden="true" style="margin-right: 13px; "></i>Call a specialist</h2>
+                    <p style="color: #848484;">Our 24/7 support team is ready for you <br> at 1-800-MY-Elixir.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header5">
+        <div class="header5inside">
+            <h1 class="header5heading1">Why Choose Elixir</h1>
+            <hr size="3.5" ; width="65" ; color="#2a3855" ;
+                style="margin-top: 13px; margin-bottom: 80px; display: flex; margin-left: 47%; border-radius: 15%; text-align: center;">
+            <div class="imagewithcontent1">
+                <img style="border-radius: 10px; width: 48%;" src="../HTML/Asset/Images/image 5.jpg" alt="">
+                <div class="header5content">
+                    <div style="width: 80%;">
+                        <h3
+                            style="margin-bottom: 20px; font-family: 'Montserrat', sans-serif; color: #2a3855; font-weight: bold; font-size: 21px;">
+                            We Are Professional
+                        </h3>
+                        <p style="color: #848484; margin-bottom: 50px;">
+                            We resource, train, speak, mentor and encourage; <br> marketplace leaders, business owners
+                            and career <br> professionals to be effective in the workplace.
+                        </p>
+                        <h3
+                            style="margin-bottom: 20px; font-family: 'Montserrat', sans-serif; color: #2a3855; font-weight: bold; font-size: 21px;">
+                            We Are Creative
+                        </h3>
+                        <p style="color: #848484; margin-bottom: 50px;">
+                            With so many factors to consider when deciding how to <br> characterize your company ,
+                            wouldn’t it be great to have a <br> group of forward-thinking, well-informed individuals on
+                            <br> board who know what they’re doing?
+                        </p>
+                        <h3
+                            style="margin-bottom: 20px; font-family: 'Montserrat', sans-serif; color: #2a3855; font-weight: bold; font-size: 21px;">
+                            24/7 Great Support </h3>
+                        <p style="color: #848484; ">
+                            Design clever and compelling marketing strategies, <br> improve product positioning, and
+                            drive conversion rates, <br> Elixir is all time available to guide you.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div
+        style="position: relative; display: flex; align-items: center; justify-content: center; width: 100%; height: 150px; background-color: #2a3855;">
+        <h1 style="color: white;">
+            If you have any query related investment... we are available 24/7
+        </h1>
+    </div>
+    <div class="header6">
+        <div class="header6inside">
+            <h1 class="header6heading">
+                Things You Get
+            </h1>
+            <hr size="3.5" ; width="70" ; color="#2a3855" ;
+                style="margin-top: 13px; margin-bottom: 50px; margin-left: 46%; border-radius: 15%;">
+            <div class="header6contentbox1">
+                <div class="header6content">
+                    <i class="fa fa-envelope-o" aria-hidden="true" style="font-size: 40px; margin-bottom: 7px;"></i>
+                    <h3
+                        style="margin-bottom: 7px; font-family: 'Montserrat', sans-serif; color: #2a3855; font-weight: bold; font-size: 21px;">
+                        Creative Support </h3>
+                    <p style="color: #848484; ">
+                        We transform brands, grow <br> businesses, and tell brand and product <br> stories in a most
+                        creative way.
+                    </p>
+                </div>
+                <div class="header6content">
+                    <i class="fa fa-envelope-o" aria-hidden="true" style="font-size: 40px; margin-bottom: 7px;"></i>
+                    <h3
+                        style="margin-bottom: 7px; font-family: 'Montserrat', sans-serif; color: #2a3855; font-weight: bold; font-size: 21px;">
+                        Creating Experiences </h3>
+                    <p style="color: #848484; ">
+                        We cover a large range of creative <br> platforms and digital projects with one <br> purpose: to
+                        create experiences.
+                    </p>
+                </div>
+                <div class="header6content">
+                    <i class="fa fa-envelope-o" aria-hidden="true" style="font-size: 40px; margin-bottom: 7px;"></i>
+                    <h3
+                        style="margin-bottom: 7px; font-family: 'Montserrat', sans-serif; color: #2a3855; font-weight: bold; font-size: 21px;">
+                        Product Consulting </h3>
+                    <p style="color: #848484; ">
+                        We guide you through the pipelines <br> that generate new products with <br> higher potential
+                        and lower risk.
+                    </p>
+                </div>
+            </div>
+            <div class="header6contentbox2">
+                <div class="header6content">
+                    <i class="fa fa-envelope-o" aria-hidden="true" style="font-size: 40px; margin-bottom: 7px;"></i>
+                    <h3
+                        style="margin-bottom: 7px; font-family: 'Montserrat', sans-serif; color: #2a3855; font-weight: bold; font-size: 21px;">
+                        Business Boosting </h3>
+                    <p style="color: #848484; ">
+                        We provide energy-efficient and <br> environmentally conservative solutions <br> to our clients
+                        to boost their business.
+                    </p>
+                </div>
+                <div class="header6content">
+                    <i class="fa fa-envelope-o" aria-hidden="true" style="font-size: 40px; margin-bottom: 7px;"></i>
+                    <h3
+                        style="margin-bottom: 7px; font-family: 'Montserrat', sans-serif; color: #2a3855; font-weight: bold; font-size: 21px;">
+                        Strategic Approach </h3>
+                    <p style="color: #848484; ">
+                        Based on solid strategic framework <br> and real, relevant research, we create <br> prototypes,
+                        not presentations.
+                    </p>
+                </div>
+                <div class="header6content">
+                    <i class="fa fa-envelope-o" aria-hidden="true" style="font-size: 40px; margin-bottom: 7px;"></i>
+                    <h3
+                        style="margin-bottom: 7px; font-family: 'Montserrat', sans-serif; color: #2a3855; font-weight: bold; font-size: 21px;">
+                        Logistic Consulting </h3>
+                    <p style="color: #848484; ">
+                        We work buy side and sell side to give <br> our clienrts hard hitting answers and <br> focus
+                        hard on best opportunities.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header7">
+        <div class="header7inside">
+            <div class="header7content">
+                <h1
+                    style="color: white; font-size: 28px; font-weight:  bold; margin-bottom: 20px; font-family: 'Montserrat', sans-serif; ">
+                    Request a call back</h1>
+                <p style="color: white;">Would you like to speak to one of our <br> financial advisers over the phone?
+                    <br> Just submit your details and we’ll be <br> in touch shortly. You can also email <br> us if you
+                    would prefer.
+                </p>
+            </div>
+            <div class="form">
+                <h3
+                    style="margin-bottom: 10px; margin-left: 45px; font-family: 'Montserrat', sans-serif;  color: white; font-weight: bold; font-size: 21px;">
+                    I would like to discuss: </h3>
+                <div class="formsheet">
+                    <form action="">
+                        <input type="text">
+                        <input type="text">
+                        <input type="text">
+                        <div class="submit">
+                            <p>Submit</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header8">
+        <div class="header8inside">
+            <h1 class="header6heading">
+                Global Leadership
+            </h1>
+            <hr size="3.5" ; width="70" ; color="#2a3855" ;
+                style="margin-top: 13px; margin-bottom: 50px; margin-left: 47%; border-radius: 15%;">
+            <div class="header8photowithcontent">
+                <div class="card">
+                    <img style="width: 100%; border-radius: 10px 10px 0 0;" src="../HTML/Asset/Images/image 6.jpg"
+                        alt="">
+                    <h3
+                        style="margin: 35px 0 8px 0; color: #2a3855;  font-family: 'Montserrat', sans-serif; font-weight: bold; font-size: 21px;">
+                        Reenal Scott </h3>
+                    <p style="font-size: 13px; color: #848484;"> Advertising Consultant</p>
+                    <p style="color: #848484; margin: 15px 0;">Reenal Scott is the Founder and CEO of <br> Elixir, which
+                        he started from his dorm <br> room in 2013 with 3 people only.</p>
+                </div>
+                <div class="card">
+                    <img style="width: 100%; border-radius: 10px 10px 0 0;" src="../HTML/Asset/Images/image 7.jpg"
+                        alt="">
+                    <h3
+                        style="margin: 35px 0 8px 0; color: #2a3855;  font-family: 'Montserrat', sans-serif; font-weight: bold; font-size: 21px;">
+                        Lily Anderson </h3>
+                    <p style="font-size: 13px; color: #848484;"> Activation Consultant</p>
+                    <p style="color: #848484; margin: 15px 0;">Lily leads Elixir UK and oversees the <br> company’s
+                        Customer Operations <br> teams supporting millions ofr users.</p>
+                </div>
+                <div class="card">
+                    <img style="width: 100%; border-radius: 10px 10px 0 0;" src="../HTML/Asset/Images/image 8.jpg"
+                        alt="">
+                    <h3
+                        style="margin: 35px 0 8px 0; color: #2a3855;  font-family: 'Montserrat', sans-serif; font-weight: bold; font-size: 21px;">
+                        Thomas Anderson </h3>
+                    <p style="font-size: 13px; color: #848484;">Change Management Consultant</p>
+                    <p style="color: #848484; margin: 15px 0;">As the VP of People, Thomas’s focus <br> lies in the
+                        development and <br> optimization of talent retention.</p>
+                </div>
+                <div class="card">
+                    <img style="width: 100%; border-radius: 10px 10px 0 0;" src="../HTML/Asset/Images/image 9.jpg"
+                        alt="">
+                    <h3
+                        style="margin: 35px 0 8px 0; color: #2a3855;  font-family: 'Montserrat', sans-serif; font-weight: bold; font-size: 21px;">
+                        Legartha Mantana </h3>
+                    <p style="font-size: 13px; color: #848484;"> Brand Management Consultant</p>
+                    <p style="color: #848484; margin: 15px 0;">As General Counsel of Elixir, Tony <br> oversees global
+                        legal activities and <br> policies across all aspects.</p>
+                </div>
+                <div class="card">
+                    <img style="width: 100%; border-radius: 10px 10px 0 0;" src="../HTML/Asset/Images/image 10.jpg"
+                        alt="">
+                    <h3
+                        style="margin: 35px 0 8px 0; color: #2a3855;  font-family: 'Montserrat', sans-serif; font-weight: bold; font-size: 21px;">
+                        John Snow </h3>
+                    <p style="font-size: 13px; color: #848484;">Business Analyst</p>
+                    <p style="color: #848484; margin: 15px 0;">John has overseen the meteoric <br> growth while
+                        protecting scaling its <br> uniquely creative and culture.</p>
+                </div>
+                <div class="card">
+                    <img style="width: 100%; border-radius: 10px 10px 0 0;" src="../HTML/Asset/Images/image 11.jpg"
+                        alt="">
+                    <h3
+                        style="margin: 35px 0 8px 0; color: #2a3855;  font-family: 'Montserrat', sans-serif; font-weight: bold; font-size: 21px;">
+                        Ragner Lothbrok </h3>
+                    <p style="font-size: 13px; color: #848484;"> Business Consultant</p>
+                    <p style="color: #848484; margin: 15px 0;">Ragner, SVP of Engineering, oversees <br> Elixir’s vast
+                        engineering organization <br> which drives the core programming.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header9">
+        <div style="background-color: #2a38559a; position: absolute; width: 100%; height: 500px;">
+        </div>
+        <div class="header9inside">
+            <h1 class="header9heading"> <span style="color: #fdd228; font-size: 50px; font-family: 'Montserrat', sans-serif;
+                font-weight: 700;"><i class="fa fa-check-square-o" aria-hidden="true"></i> Take the right step,</span>  <br>do the big things.</h1>
+            <div class="percentage">
 
-        function display(num){
-            output.value += num;
-        }
+            </div>    
+        </div>
+    </div>
+    <div class="header10">
 
-        function calculate(){
-            try{
-                output.value = eval(output.value);
-            }
-            catch(err){
-                alert("Invalid");
-            }
-        }
-
-        function del(){
-            output.value = output.value.slice(0,-1);
-        }
-
-        function cle(){
-            output.value = " ";
-        }
-
-    </script>
+    </div>
+    <div class="header11">
+        <div class="logos">
+            <img src="../HTML/Asset/Logo/logo2.png" alt="">
+            <img src="../HTML/Asset/Logo/logo3.png" alt="">
+            <img src="../HTML/Asset/Logo/logo4.png" alt="">
+            <img src="../HTML/Asset/Logo/logo5.png" alt="">
+            <img src="../HTML/Asset/Logo/logo6.png" alt="">
+            <img src="../HTML/Asset/Logo/logo7.png" alt="">
+        </div>
+    </div>
+    <div class="header12">
+        <div class="header12inside">
+            <h1 class="header12heading">
+                Latest News
+            </h1>
+            <hr size="3.5" ; width="70" ; color="#2a3855" ;
+                style="margin-top: 13px; margin-bottom: 50px; margin-left: 46%; border-radius: 15%;">
+                <div class="header12content">
+                    <div class="card2">
+                        <img style="width: 100%; border-radius: 10px 10px 0 0;" src="../HTML/Asset/Images/image 6.jpg"
+                            alt="">
+                        <h3
+                            style="margin: 35px 0 8px 0; color: #2a3855;  font-family: 'Montserrat', sans-serif; font-weight: bold; font-size: 21px;">
+                            Tax impacts of lease mean <br> accounting change </h3>
+                        <p style=" color: #848484;"> By Paul O'Sullivan</p>
+                        <p style="color: #848484; margin: 35px 0 15px 0;">HMRC released a consultation <br> document to flag some potential tax <br> impacts that a forthcoming change...</p>
+                        <p>learn more <i class="fa fa-long-arrow-right"
+                            aria-hidden="true" style="margin-left: 7px;"></i></p>
+                    </div>
+                    <div class="card2">
+                        <img style="width: 100%; border-radius: 10px 10px 0 0;" src="../HTML/Asset/Images/image 7.jpg"
+                            alt="">
+                            <h3
+                            style="margin: 35px 0 8px 0; color: #2a3855;  font-family: 'Montserrat', sans-serif; font-weight: bold; font-size: 21px;">
+                            Tax impacts of lease mean <br> accounting change </h3>
+                        <p style=" color: #848484;"> By Paul O'Sullivan</p>
+                        <p style="color: #848484; margin: 35px 0 15px 0;">HMRC released a consultation <br> document to flag some potential tax <br> impacts that a forthcoming change...</p>
+                        <p>learn more <i class="fa fa-long-arrow-right"
+                            aria-hidden="true" style="margin-left: 7px;"></i></p>
+                    </div>
+                    <div class="card2">
+                        <img style="width: 100%; border-radius: 10px 10px 0 0;" src="../HTML/Asset/Images/image 8.jpg"
+                            alt="">
+                            <h3
+                            style="margin: 35px 0 8px 0; color: #2a3855;  font-family: 'Montserrat', sans-serif; font-weight: bold; font-size: 21px;">
+                            Tax impacts of lease mean <br> accounting change </h3>
+                        <p style=" color: #848484;"> By Paul O'Sullivan</p>
+                        <p style="color: #848484; margin: 35px 0 15px 0;">HMRC released a consultation <br> document to flag some potential tax <br> impacts that a forthcoming change...</p>
+                        <p>learn more <i class="fa fa-long-arrow-right"
+                            aria-hidden="true" style="margin-left: 7px;"></i></p>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <script src="../HTML/Asset/js/clone.js"></script>
 </body>
+
 </html>
-
-
-
-
-
